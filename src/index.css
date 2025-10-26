@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Enhanced Eco-green color palette for ბაღელა */
+    --background: 44 58% 96%; /* Lighter warm cream */
+    --foreground: 30 20% 25%; /* Deeper earth brown */
+
+    --card: 0 0% 100%;
+    --card-foreground: 30 20% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 20% 25%;
+
+    --primary: 151 57% 48%; /* 3BB273 - vibrant green */
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 151 57% 65%;
+    --primary-dark: 151 60% 35%;
+
+    --secondary: 69 59% 52%; /* A4C639 - lime green */
+    --secondary-foreground: 30 15% 25%;
+    --secondary-light: 69 59% 70%;
+
+    --muted: 44 40% 92%;
+    --muted-foreground: 30 15% 45%;
+
+    --accent: 39 100% 60%; /* Warm golden accent */
+    --accent-foreground: 30 20% 25%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 44 30% 88%;
+    --input: 44 30% 92%;
+    --ring: 151 57% 48%;
+
+    --radius: 1rem;
+    
+    /* Enhanced eco tokens */
+    --eco-green: 151 57% 48%;
+    --eco-lime: 69 59% 52%;
+    --eco-earth: 30 20% 25%;
+    --eco-cream: 44 58% 96%;
+    --eco-gold: 39 100% 60%;
+    
+    /* Gradient tokens */
+    --gradient-green: linear-gradient(135deg, hsl(151 57% 48%) 0%, hsl(151 60% 35%) 100%);
+    --gradient-lime: linear-gradient(135deg, hsl(69 59% 52%) 0%, hsl(69 65% 40%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(151 57% 48%) 0%, hsl(69 59% 52%) 100%);
+    --gradient-warm: linear-gradient(180deg, hsl(44 58% 98%) 0%, hsl(44 58% 92%) 100%);
+    
+    /* Shadow tokens */
+    --shadow-sm: 0 2px 8px -2px hsl(151 57% 48% / 0.1);
+    --shadow-md: 0 4px 16px -4px hsl(151 57% 48% / 0.15);
+    --shadow-lg: 0 8px 32px -8px hsl(151 57% 48% / 0.2);
+    --shadow-xl: 0 16px 48px -12px hsl(151 57% 48% / 0.25);
+    --shadow-glow: 0 0 24px hsl(151 57% 48% / 0.3);
+    
+    /* Transition tokens */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 151 20% 10%;
+    --foreground: 44 58% 95%;
+
+    --card: 151 18% 14%;
+    --card-foreground: 44 58% 95%;
+
+    --popover: 151 18% 14%;
+    --popover-foreground: 44 58% 95%;
+
+    --primary: 151 57% 52%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 151 57% 65%;
+    --primary-dark: 151 60% 35%;
+
+    --secondary: 69 59% 48%;
+    --secondary-foreground: 44 58% 95%;
+    --secondary-light: 69 59% 65%;
+
+    --muted: 151 15% 22%;
+    --muted-foreground: 44 35% 70%;
+
+    --accent: 39 100% 55%;
+    --accent-foreground: 44 58% 95%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 44 58% 95%;
+
+    --border: 151 15% 28%;
+    --input: 151 15% 26%;
+    --ring: 151 57% 52%;
+    
+    --eco-green: 151 57% 52%;
+    --eco-lime: 69 59% 48%;
+    --eco-earth: 44 58% 95%;
+    --eco-cream: 151 20% 10%;
+    --eco-gold: 39 100% 55%;
+    
+    --gradient-green: linear-gradient(135deg, hsl(151 57% 52%) 0%, hsl(151 60% 40%) 100%);
+    --gradient-lime: linear-gradient(135deg, hsl(69 59% 48%) 0%, hsl(69 65% 35%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(151 57% 52%) 0%, hsl(69 59% 48%) 100%);
+    --gradient-warm: linear-gradient(180deg, hsl(151 20% 12%) 0%, hsl(151 20% 8%) 100%);
+    
+    --shadow-sm: 0 2px 8px -2px hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 16px -4px hsl(0 0% 0% / 0.4);
+    --shadow-lg: 0 8px 32px -8px hsl(0 0% 0% / 0.5);
+    --shadow-xl: 0 16px 48px -12px hsl(0 0% 0% / 0.6);
+    --shadow-glow: 0 0 24px hsl(151 57% 52% / 0.4);
+    
+    --sidebar-background: 151 18% 14%;
+    --sidebar-foreground: 44 58% 95%;
+    --sidebar-primary: 151 57% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 151 15% 22%;
+    --sidebar-accent-foreground: 44 58% 95%;
+    --sidebar-border: 151 15% 28%;
+    --sidebar-ring: 151 57% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-georgian;
+    font-feature-settings: "cv11", "ss01";
+    font-variant-ligatures: common-ligatures;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-georgian;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .shadow-eco-sm {
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .shadow-eco-md {
+    box-shadow: var(--shadow-md);
+  }
+  
+  .shadow-eco-lg {
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .shadow-eco-xl {
+    box-shadow: var(--shadow-xl);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .gradient-green {
+    background: var(--gradient-green);
+  }
+  
+  .gradient-lime {
+    background: var(--gradient-lime);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-spring {
+    transition: var(--transition-spring);
+  }
+}
